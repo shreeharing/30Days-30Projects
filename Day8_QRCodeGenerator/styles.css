@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+
+body{
+    background: linear-gradient(250deg,#F8FAFC,#D9EAFD,#BCCCDC,#9AA6B2);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glow{
+    background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffff, #ff00cc);
+    padding: 5px;
+    animation: glowing-effect 10s ease infinite;
+    background-size: 800% 800%;
+    border-radius: 20px;
+}
+.container{
+ width: 60vw;
+ border-radius: 20px;
+ padding: 8%;
+ background: #8F87F1;
+}
+@keyframes glowing-effect {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.container h1{
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.entry{
+    display: flex;
+    flex-direction: column;
+}
+.container input{
+    border: 2px;
+    outline: 0;
+    width: 92%;
+    height: 50px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.entry #btn{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 25%;
+    height: 40px;
+    margin-left: 34%;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #4f64be;
+}
+#btn:hover{
+    background: #577BC1;
+}
+.img-div{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qr-code{
+    width: 100%;
+    padding: 20px;
+}
+.img-div.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
