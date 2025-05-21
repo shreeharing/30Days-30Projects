@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/dd6fad44aa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showNotification(successMsg)" id="btn">Succecss</button>
+        <button onclick="showNotification(errorMsg)" id="btn">Error</button>
+        <button onclick="showNotification(invalidMsg)" id="btn">Invalid</button>
+    </div>
+    <div id="toast">
+    
+    </div>
+</body>
+<script>
+const successMsg = `<div class="demp"><i class="fa-solid fa-circle-check"></i>Successfully submitted</div?`;
+const errorMsg = `<div class="demp"><i class="fa-solid fa-circle-xmark"></i>please fix the error!</div?`;
+const invalidMsg = `<div class="demp"><i class="fa-solid fa-circle-exclamation"></i>Invalid input, check again</div?`;
+
+const toastEle = document.getElementById("toast");
+function showNotification(msg){
+    const notif = document.createElement("div");
+    notif.classList.add('notif');
+    notif.innerHTML = msg;
+    toastEle.appendChild(notif);
+
+    if(msg.includes("error")){
+        notif.classList.add("error");
+    }
+    else if(msg.includes("Invalid")){
+        notif.classList.add("invalid");
+    }
+    setTimeout(()=>{
+        notif.remove();
+    },6000)
+}
+</script>
+</html>
