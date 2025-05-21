@@ -45,3 +45,10 @@ progress.onchange = function () {
     ctrlIcon.classList.add("fa-pause");
     ctrlIcon.classList.remove("fa-play");
 };
+function forward10() {
+    song.currentTime = Math.min(song.currentTime + 10, song.duration);
+}
+
+function rewind10() {
+    song.currentTime = Math.max(song.currentTime - 10, 0);
+}

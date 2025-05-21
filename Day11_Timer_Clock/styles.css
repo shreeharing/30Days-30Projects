@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'poppins','sans-serif';
+}
+
+body{
+    background: linear-gradient(70deg,#2E5077,#4DA1A9,#79D7BE,#F6F4F0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    height: 400px;
+    width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    background-image: url(https://wallpaperaccess.com/full/4743187.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin-top: 40px;
+    font-size: 35px;
+    color: #F6F4F0;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+.buttons div{
+    color: #fff;
+    margin: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: #fff solid 2px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    cursor: pointer;
+}
+.buttons div:nth-child(2){
+    transform: scale(1.5);
+    background: rgb(247, 105, 54);
+    border: none;
+}
